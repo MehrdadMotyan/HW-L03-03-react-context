@@ -27,17 +27,16 @@ const TransactionList = () => {
                   <DeleteIcon className="text-red-400" />
                 </IconButton>
               }
-              sx={{ paddingLeft: '50px' }} // ایجاد فضا برای دکمه حذف در سمت چپ
+              sx={{ paddingLeft: '50px' }}
             >
               <ListItemText
                 primary={
                   <Box className="flex justify-between items-center mb-1">
                     <span className="font-bold text-slate-800">{t.title}</span>
                     
-                    {/* بخش اصلاح شده برای نمایش صحیح علامت منفی/مثبت در سمت چپ */}
                     <span 
                       className={`font-bold flex items-center gap-1 ${t.type === 'income' ? 'text-green-600' : 'text-red-600'}`}
-                      style={{ direction: 'ltr' }} // اجبار به نمایش از چپ به راست برای اعداد و علائم
+                      style={{ direction: 'ltr' }}
                     >
                       <span>{t.type === 'income' ? '+' : '-'}</span>
                       <span>{t.amount.toLocaleString()}</span>
